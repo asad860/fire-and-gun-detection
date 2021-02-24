@@ -15,14 +15,16 @@ args = parser.parse_args()
 
 #Load yolo
 def load_yolo():
-	net = cv2.dnn.readNet("yolov3.weights", "yolov3.cfg")
+	weights_file = "yolov3_custom_last.weights"
+	net = cv2.dnn.readNet(weights_file, "yolov3-custom.cfg")
 	classes = []
 	with open("obj.names", "r") as f:
 		classes = [line.strip() for line in f.readlines()]
-
+	print(f'classes: {classes}')
 	layers_names = net.getLayerNames()
 	output_layers = [layers_names[i[0]-1] for i in net.getUnconnectedOutLayers()]
 	colors = np.random.uniform(0, 255, size=(len(classes), 3))
+	print(colors.shape)
 	return net, classes, colors, output_layers
 
 def load_image(img_path):
@@ -80,9 +82,12 @@ def draw_labels(boxes, confs, colors, class_ids, classes, img):
 		if i in indexes:
 			x, y, w, h = boxes[i]
 			label = str(classes[class_ids[i]])
-			color = colors[i]
-			cv2.rectangle(img, (x,y), (x+w, y+h), color, 2)
-			cv2.putText(img, label, (x, y - 5), font, 1, color, 1)
+			try:
+				color = colors[i]
+				cv2.rectangle(img, (x,y), (x+w, y+h), color, 2)
+				cv2.putText(img, label, (x, y - 5), font, 1, color, 1)
+			except :
+				print('Error')
 	img=cv2.resize(img, (800,600))
 	cv2.imshow("Image", img)
 
