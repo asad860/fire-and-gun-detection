@@ -1,4 +1,4 @@
-# Fire and Gun Detection
+# Fire, Gun and Knife Detection
 
 ![result](https://raw.githubusercontent.com/atulyakumar97/fire-and-gun-detection/master/screenshots/0.jpg "Model Output")
 
@@ -23,7 +23,7 @@ optional arguments:
 
 ### Weights File Backup
 
-If the GitLFS file is not accessible - Download [Weights](https://1drv.ms/u/s!Aj0l1DM1G5wOm0Vg2n7RI5Q4_ZOq?e=gGvvMy) and keep inside the project folder.
+If the GitLFS file is not accessible - Download [Weights](https://drive.google.com/file/d/1QB7IklLD6X16dAf-JYGkj3yHdZW-EdNW/view?usp=sharing) and keep inside the project folder.
 
 
 ### Move inside the project folder and use the following command:
@@ -33,7 +33,7 @@ python yolo.py --play_video True --video_path videos/fire1.mp4
 
 [Dataset](https://www.kaggle.com/atulyakumar98/fire-and-gun-dataset)
 
-Training done on google collab - [Jupyter notebook](https://colab.research.google.com/drive/1rtBmGPgYQGwpAPkcqqgb_RE6fZj89ceb?usp=sharing)
+Training done on google collab - [Jupyter notebook](https://colab.research.google.com/drive/1H1kcSypefZtlMDeG7P7kmcR0dChR46X_?usp=sharing)
 
 Demo: [Youtube](https://www.youtube.com/watch?v=KUrOOUEtYzo)
 
