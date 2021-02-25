@@ -83,7 +83,7 @@ def draw_labels(boxes, confs, colors, class_ids, classes, img):
 			x, y, w, h = boxes[i]
 			label = str(classes[class_ids[i]])
 			try:
-				color = colors[i]
+				color = colors[2]
 				cv2.rectangle(img, (x,y), (x+w, y+h), color, 2)
 				cv2.putText(img, label, (x, y - 5), font, 1, color, 1)
 			except :
