@@ -2,6 +2,11 @@ import cv2
 import numpy as np 
 import argparse
 import time
+from threading import Thread
+import uuid
+import os
+import logging
+import smtplib, ssl
 
 parser = argparse.ArgumentParser()
 parser.add_argument('--webcam', help="True/False", default=False)
@@ -12,19 +17,28 @@ parser.add_argument('--image_path', help="Path of image to detect objects", defa
 parser.add_argument('--verbose', help="To print statements", default=True)
 args = parser.parse_args()
 
+logging.basicConfig(filename='logs.log', level=logging.DEBUG, format='%(levelname)s:%(asctime)s %(message)s', datefmt='%m/%d/%Y %I:%M:%S %p')
+
+CONFIDENCE = 0.5
+ALERT_DIR = 'threats'
+sender = "from@example.com"
+receiver = "to@example.com"
+USERNAME = "user@gmail.com"
+PASSWORD = "password"
+PORT = 465
+SERVER = "smtp.gmail.com"
 
 #Load yolo
 def load_yolo():
 	weights_file = "yolov3_custom_last.weights"
 	net = cv2.dnn.readNet(weights_file, "yolov3-custom.cfg")
 	classes = []
-	with open("obj.names", "r") as f:
+	with open("classes.names", "r") as f:
 		classes = [line.strip() for line in f.readlines()]
 	print(f'classes: {classes}')
 	layers_names = net.getLayerNames()
 	output_layers = [layers_names[i[0]-1] for i in net.getUnconnectedOutLayers()]
 	colors = np.random.uniform(0, 255, size=(len(classes), 3))
-	print(colors.shape)
 	return net, classes, colors, output_layers
 
 def load_image(img_path):
@@ -36,7 +50,6 @@ def load_image(img_path):
 
 def start_webcam():
 	cap = cv2.VideoCapture(0)
-
 	return cap
 
 
@@ -63,7 +76,7 @@ def get_box_dimensions(outputs, height, width):
 			scores = detect[5:]
 			class_id = np.argmax(scores)
 			conf = scores[class_id]
-			if conf > 0.3:
+			if conf > CONFIDENCE:
 				center_x = int(detect[0] * width)
 				center_y = int(detect[1] * height)
 				w = int(detect[2] * width)
@@ -82,14 +95,56 @@ def draw_labels(boxes, confs, colors, class_ids, classes, img):
 		if i in indexes:
 			x, y, w, h = boxes[i]
 			label = str(classes[class_ids[i]])
-			try:
-				color = colors[2]
-				cv2.rectangle(img, (x,y), (x+w, y+h), color, 2)
-				cv2.putText(img, label, (x, y - 5), font, 1, color, 1)
-			except :
-				print('Error')
+			color = colors[2]
+			cv2.rectangle(img, (x,y), (x+w, y+h), color, 2)
+			cv2.putText(img, label+f" confidence: {100*confs[i]:.2f}", (x, y - 5), font, 1, color, 1)
+
+			if label.lower() in ["gun", 'knife', 'rifle']:
+				generate_alert(img, label, confs[i])
+
 	img=cv2.resize(img, (800,600))
 	cv2.imshow("Image", img)
+
+
+def image_log_mail(image_obj, label, conf):
+	if not os.path.exists(ALERT_DIR):
+		os.mkdir(ALERT_DIR)
+	id = str(uuid.uuid4())
+	path = os.path.join(ALERT_DIR, id+f'_{label}'+'.jpg')
+	cv2.imwrite(path, image_obj)
+	logging.warning(f'{label} detected, path: {path}')
+
+	send_mail(path)
+
+def send_mail(filename):
+	from email.mime.text import MIMEText
+	from email.mime.image import MIMEImage
+	from email.mime.multipart import MIMEMultipart
+
+	img_data = open(filename, 'rb').read()
+	msg = MIMEMultipart()
+	msg['Subject'] = 'Annomly detected.'
+	msg['From'] = sender
+	msg['To'] = receiver
+
+	text = MIMEText("test")
+	msg.attach(text)
+	image = MIMEImage(img_data, name=os.path.basename(filename))
+	msg.attach(image)
+
+	try:
+		context = ssl.create_default_context()
+		with smtplib.SMTP_SSL(SERVER, PORT, context=context) as server:
+			server.login(USERNAME, PASSWORD)
+			server.sendmail(sender, receiver, msg.as_string())
+			logging.info('Annomly detect: Mail sent.')
+	except Exception as e:
+		logging.error(str(e))
+
+def generate_alert(image_obj, label, conf):
+	thr = Thread(target=image_log_mail, args=[image_obj, label, conf])
+	thr.start()
+
 
 def image_detect(img_path): 
 	model, classes, colors, output_layers = load_yolo()
