@@ -127,7 +127,7 @@ def send_mail(filename):
 	msg['From'] = sender
 	msg['To'] = receiver
 
-	text = MIMEText("test")
+	text = MIMEText("Report")
 	msg.attach(text)
 	image = MIMEImage(img_data, name=os.path.basename(filename))
 	msg.attach(image)
