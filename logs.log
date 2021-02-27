@@ -1,5 +1,4 @@
-WARNING:02/25/2021 04:33:29 PM Knife detected, path: threats/11b96397-7272-43f2-919f-01359ec978bd_Knife.jpg
-WARNING:02/25/2021 04:33:54 PM Knife detected, path: threats/02f3ea00-2097-4fc9-81b3-4bc358cb33bb_Knife.jpg
-WARNING:02/25/2021 05:03:13 PM Knife detected, path: threats/9e059090-234e-459a-93fa-27458bfde618_Knife.jpg
-WARNING:02/25/2021 05:03:47 PM Knife detected, path: threats/142cdfc6-9370-43b0-b8f5-2adeb5cd6a82_Knife.jpg
-WARNING:02/25/2021 05:04:55 PM Knife detected, path: threats/4ad641e2-401a-4a4f-b6d0-eefa84f79134_Knife.jpg
+WARNING:02/28/2021 01:05:44 AM Gun detected, path: threats\ce68bd71-5f83-470e-b294-c6092f4bcf9f_Gun.jpg
+ERROR:02/28/2021 01:05:45 AM (535, b'5.7.8 Username and Password not accepted. Learn more at\n5.7.8  https://support.google.com/mail/?p=BadCredentials f9sm12492962wro.77 - gsmtp')
+WARNING:02/28/2021 01:05:49 AM Gun detected, path: threats\bae629d1-ecb1-4b75-981b-f3502a3f45bd_Gun.jpg
+ERROR:02/28/2021 01:05:50 AM (535, b'5.7.8 Username and Password not accepted. Learn more at\n5.7.8  https://support.google.com/mail/?p=BadCredentials f9sm12493120wro.77 - gsmtp')
