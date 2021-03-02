@@ -5,3 +5,5 @@
 /threats
 *.log
 .vscode
+*.avi
+logs.log

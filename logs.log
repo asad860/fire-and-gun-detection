@@ -2,3 +2,43 @@ WARNING:02/28/2021 01:05:44 AM Gun detected, path: threats\ce68bd71-5f83-470e-b2
 ERROR:02/28/2021 01:05:45 AM (535, b'5.7.8 Username and Password not accepted. Learn more at\n5.7.8  https://support.google.com/mail/?p=BadCredentials f9sm12492962wro.77 - gsmtp')
 WARNING:02/28/2021 01:05:49 AM Gun detected, path: threats\bae629d1-ecb1-4b75-981b-f3502a3f45bd_Gun.jpg
 ERROR:02/28/2021 01:05:50 AM (535, b'5.7.8 Username and Password not accepted. Learn more at\n5.7.8  https://support.google.com/mail/?p=BadCredentials f9sm12493120wro.77 - gsmtp')
+WARNING:03/02/2021 03:24:07 PM Knife detected, path: threats/8f21d4bb-eb57-4a94-b321-a8ee771752bb_Knife.jpg
+ERROR:03/02/2021 03:24:08 PM (535, b'5.7.8 Username and Password not accepted. Learn more at\n5.7.8  https://support.google.com/mail/?p=BadCredentials p12sm2073297wmq.1 - gsmtp')
+WARNING:03/02/2021 03:24:18 PM Knife detected, path: threats/f53bbc78-ce1b-46a3-8423-bfab6fb7c589_Knife.jpg
+ERROR:03/02/2021 03:24:19 PM (535, b'5.7.8 Username and Password not accepted. Learn more at\n5.7.8  https://support.google.com/mail/?p=BadCredentials a14sm31886208wrg.84 - gsmtp')
+WARNING:03/02/2021 03:24:24 PM Knife detected, path: threats/e8a3d9e9-4282-47ce-a77f-cbe6b9fb5247_Knife.jpg
+ERROR:03/02/2021 03:24:25 PM (535, b'5.7.8 Username and Password not accepted. Learn more at\n5.7.8  https://support.google.com/mail/?p=BadCredentials j12sm16529014wrt.27 - gsmtp')
+WARNING:03/02/2021 03:24:38 PM Knife detected, path: threats/0dc96378-1a4c-4e99-b1e7-add3bc389a66_Knife.jpg
+ERROR:03/02/2021 03:24:40 PM (535, b'5.7.8 Username and Password not accepted. Learn more at\n5.7.8  https://support.google.com/mail/?p=BadCredentials q15sm28207238wrr.58 - gsmtp')
+WARNING:03/02/2021 03:27:48 PM Gun detected, path: threats/669ead04-93fd-43ab-81f4-e96721d09305_Gun.jpg
+ERROR:03/02/2021 03:27:51 PM (535, b'5.7.8 Username and Password not accepted. Learn more at\n5.7.8  https://support.google.com/mail/?p=BadCredentials p10sm14326170wrw.33 - gsmtp')
+WARNING:03/02/2021 03:28:07 PM Knife detected, path: threats/9656a908-6c97-43e7-9d5b-2cc49a18dc54_Knife.jpg
+ERROR:03/02/2021 03:28:09 PM (535, b'5.7.8 Username and Password not accepted. Learn more at\n5.7.8  https://support.google.com/mail/?p=BadCredentials f9sm21697013wro.77 - gsmtp')
+WARNING:03/02/2021 03:43:25 PM Knife detected, path: threats/13e2fb16-510a-40a6-b9da-bfdcc2347585_Knife.jpg
+ERROR:03/02/2021 03:43:27 PM (535, b'5.7.8 Username and Password not accepted. Learn more at\n5.7.8  https://support.google.com/mail/?p=BadCredentials g16sm8503238wrs.76 - gsmtp')
+WARNING:03/02/2021 03:50:29 PM Knife detected, path: threats/ba2ae33a-59e0-4657-b7d0-ee84b2f775c9_Knife.jpg
+ERROR:03/02/2021 03:50:31 PM (535, b'5.7.8 Username and Password not accepted. Learn more at\n5.7.8  https://support.google.com/mail/?p=BadCredentials r10sm2798942wmh.45 - gsmtp')
+WARNING:03/02/2021 03:55:41 PM Knife detected, path: threats/6ae9f248-01d1-49e2-9812-aa91d27bead2_Knife.jpg
+ERROR:03/02/2021 03:55:42 PM (535, b'5.7.8 Username and Password not accepted. Learn more at\n5.7.8  https://support.google.com/mail/?p=BadCredentials f7sm9446973wrm.36 - gsmtp')
+WARNING:03/02/2021 04:36:06 PM Knife detected, path: threats/817a03c5-3f2d-4981-bcc3-566a26ec046c_Knife.jpg
+ERROR:03/02/2021 04:36:08 PM (535, b'5.7.8 Username and Password not accepted. Learn more at\n5.7.8  https://support.google.com/mail/?p=BadCredentials p16sm16409622wrt.54 - gsmtp')
+WARNING:03/02/2021 04:37:40 PM Knife detected, path: threats/48823ef4-24e2-4ca4-845d-95aa6c8abcb5_Knife.jpg
+ERROR:03/02/2021 04:37:42 PM (535, b'5.7.8 Username and Password not accepted. Learn more at\n5.7.8  https://support.google.com/mail/?p=BadCredentials n6sm3122944wmd.27 - gsmtp')
+WARNING:03/02/2021 05:14:28 PM Knife detected, path: threats/0362c958-9e64-4bf4-aa01-b4e18175a4b2_Knife.jpg
+ERROR:03/02/2021 05:14:30 PM (535, b'5.7.8 Username and Password not accepted. Learn more at\n5.7.8  https://support.google.com/mail/?p=BadCredentials u2sm5505263wrp.12 - gsmtp')
+WARNING:03/02/2021 06:53:42 PM Knife detected, path: threats/7b8ff920-da9e-4003-8f4b-f1afa9f0f043_Knife.jpg
+ERROR:03/02/2021 06:53:44 PM (535, b'5.7.8 Username and Password not accepted. Learn more at\n5.7.8  https://support.google.com/mail/?p=BadCredentials o7sm944972wrs.16 - gsmtp')
+WARNING:03/02/2021 06:56:34 PM Knife detected, path: threats/04cf34ba-8989-45c7-a808-2a74acc54489_Knife.jpg
+ERROR:03/02/2021 06:56:36 PM (535, b'5.7.8 Username and Password not accepted. Learn more at\n5.7.8  https://support.google.com/mail/?p=BadCredentials 4sm2869588wma.0 - gsmtp')
+WARNING:03/02/2021 06:58:08 PM Gun detected, path: threats/dfca9ee5-0dd0-4a16-a344-e1225b871611_Gun.jpg
+ERROR:03/02/2021 06:58:09 PM (535, b'5.7.8 Username and Password not accepted. Learn more at\n5.7.8  https://support.google.com/mail/?p=BadCredentials p18sm21140421wro.18 - gsmtp')
+WARNING:03/02/2021 06:59:54 PM Knife detected, path: threats/a8115d7e-d141-44cc-98df-ea9c52ff6c93_Knife.jpg
+ERROR:03/02/2021 06:59:55 PM (535, b'5.7.8 Username and Password not accepted. Learn more at\n5.7.8  https://support.google.com/mail/?p=BadCredentials y205sm3677550wmc.18 - gsmtp')
+WARNING:03/02/2021 07:00:30 PM Gun detected, path: threats/0f7e6df2-5696-4664-bb63-ea7a3dc299ce_Gun.jpg
+ERROR:03/02/2021 07:00:32 PM (535, b'5.7.8 Username and Password not accepted. Learn more at\n5.7.8  https://support.google.com/mail/?p=BadCredentials r10sm3501968wmh.45 - gsmtp')
+WARNING:03/02/2021 07:00:56 PM Gun detected, path: threats/53ce68ea-9f30-4957-846c-7494083a4233_Gun.jpg
+ERROR:03/02/2021 07:00:57 PM (535, b'5.7.8 Username and Password not accepted. Learn more at\n5.7.8  https://support.google.com/mail/?p=BadCredentials y205sm3681367wmc.18 - gsmtp')
+WARNING:03/02/2021 07:05:27 PM Knife detected, path: threats/5965f18d-8bcc-41e0-b724-42258d5fdb9d_Knife.jpg
+ERROR:03/02/2021 07:05:29 PM (535, b'5.7.8 Username and Password not accepted. Learn more at\n5.7.8  https://support.google.com/mail/?p=BadCredentials l15sm2825735wmh.21 - gsmtp')
+WARNING:03/02/2021 07:06:26 PM Knife detected, path: threats/c11deeae-0ed1-43b6-a68e-315730d4422d_Knife.jpg
+ERROR:03/02/2021 07:06:28 PM (535, b'5.7.8 Username and Password not accepted. Learn more at\n5.7.8  https://support.google.com/mail/?p=BadCredentials l8sm13933312wrx.83 - gsmtp')

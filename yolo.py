@@ -10,6 +10,7 @@ import smtplib
 import ssl
 from datetime import datetime
 
+
 parser = argparse.ArgumentParser()
 parser.add_argument('--webcam', help="True/False", default=False)
 parser.add_argument('--play_video', help="Tue/False", default=False)
@@ -37,13 +38,18 @@ SERVER = "smtp.gmail.com"
 time_interval = 15
 
 # Load yolo
+video_interval = 20  # seconds
+video_fps = 2.0
 
 
 def load_yolo():
     weights_file = "yolov3_custom_last.weights"
-    net = cv2.dnn.readNet(weights_file, "yolov3-custom.cfg")
+    cfg = "yolov3-custom.cfg"
+    names = "classes.names"
+
+    net = cv2.dnn.readNet(weights_file, cfg)
     classes = []
-    with open("classes.names", "r") as f:
+    with open(names, "r") as f:
         classes = [line.strip() for line in f.readlines()]
     print(f'classes: {classes}')
     layers_names = net.getLayerNames()
@@ -68,7 +74,7 @@ def start_webcam():
 
 def display_blob(blob):
     '''
-            Three images each for RED, GREEN, BLUE channel
+    Three images each for RED, GREEN, BLUE channel
     '''
     for b in blob:
         for n, imgb in enumerate(b):
@@ -119,8 +125,11 @@ def draw_labels(boxes, confs, colors, class_ids, classes, img):
 
             if label.lower() in ["gun", 'knife', 'rifle']:
                 generate_alert(img, label, confs[i])
+    return img
 
-    img = cv2.resize(img, (800, 600))
+
+def show_image(img):
+    img = cv2.resize(img, (600, 400))
     cv2.imshow("Image", img)
 
 
@@ -180,7 +189,8 @@ def image_detect(img_path):
     image, height, width, channels = load_image(img_path)
     blob, outputs = detect_objects(image, model, output_layers)
     boxes, confs, class_ids = get_box_dimensions(outputs, height, width)
-    draw_labels(boxes, confs, colors, class_ids, classes, image)
+    img = draw_labels(boxes, confs, colors, class_ids, classes, image)
+    show_image(img)
     while True:
         key = cv2.waitKey(1)
         if key == 27:
@@ -190,16 +200,42 @@ def image_detect(img_path):
 def webcam_detect():
     model, classes, colors, output_layers = load_yolo()
     cap = start_webcam()
+    
+    fourcc = cv2.VideoWriter_fourcc(*'XVID')
+    out = cv2.VideoWriter('current.avi', fourcc, video_fps, (640,480))
+    video_start_time = datetime.now()
+
+    model_fps = 0
+    model_start = datetime.now()
     while True:
-        _, frame = cap.read()
+        ret, frame = cap.read()
+        start_frame = datetime.now()
+
+        # ----------------------------------------model-----------------------------
         height, width, channels = frame.shape
         blob, outputs = detect_objects(frame, model, output_layers)
         boxes, confs, class_ids = get_box_dimensions(outputs, height, width)
-        draw_labels(boxes, confs, colors, class_ids, classes, frame)
+        frame = draw_labels(boxes, confs, colors, class_ids, classes, frame)
+        # -----------------------------------------After Model----------------------
+
+        show_image(frame)
+        out.write(frame)
+
+        if ((datetime.now() - video_start_time).seconds > video_interval):
+            out.release()
+            os.rename('current.avi', 'last.avi')
+            video_start_time = datetime.now()
+            out = cv2.VideoWriter('current.avi',fourcc, video_fps, (640,480))
+
         key = cv2.waitKey(1)
+        print("time-per-frame: ", (datetime.now() - start_frame).microseconds/10**6, "FPS: ", cap.get(cv2.CAP_PROP_FPS))
+
         if key == 27:
             break
     cap.release()
+    out.release()
+    cv2.destroyAllWindows()
+
 
 
 def start_video(video_path):
@@ -211,7 +247,8 @@ def start_video(video_path):
         height, width, channels = frame.shape
         blob, outputs = detect_objects(frame, model, output_layers)
         boxes, confs, class_ids = get_box_dimensions(outputs, height, width)
-        draw_labels(boxes, confs, colors, class_ids, classes, frame)
+        img = draw_labels(boxes, confs, colors, class_ids, classes, frame)
+        show_image(img)
 
         key = cv2.waitKey(1)
         if cv2.waitKey(1) & 0xFF == ord('q'):
