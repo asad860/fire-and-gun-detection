@@ -1,3 +1,6 @@
+# Follow these tutorial to install opencv
+# https://qengineering.eu/install-opencv-4.5-on-raspberry-pi-4.html
+
 import cv2
 import numpy as np
 import argparse
@@ -33,9 +36,10 @@ sender = "from@example.com"
 receiver = "to@example.com"
 USERNAME = "user@gmail.com"
 PASSWORD = "password"
+CC_person = 'second@gmail.com'
 PORT = 465
 SERVER = "smtp.gmail.com"
-time_interval = 15
+time_interval = 15  # seconds after generate new mail.
 
 # Load yolo
 video_interval = 20  # seconds
@@ -154,6 +158,7 @@ def send_mail(filename):
     msg['Subject'] = 'Annomly detected.'
     msg['From'] = sender
     msg['To'] = receiver
+    msg['Cc'] = CC_person
 
     text = MIMEText("Report")
     msg.attach(text)
@@ -200,9 +205,9 @@ def image_detect(img_path):
 def webcam_detect():
     model, classes, colors, output_layers = load_yolo()
     cap = start_webcam()
-    
+
     fourcc = cv2.VideoWriter_fourcc(*'XVID')
-    out = cv2.VideoWriter('current.avi', fourcc, video_fps, (640,480))
+    out = cv2.VideoWriter('current.avi', fourcc, video_fps, (640, 480))
     video_start_time = datetime.now()
 
     model_fps = 0
@@ -223,19 +228,21 @@ def webcam_detect():
 
         if ((datetime.now() - video_start_time).seconds > video_interval):
             out.release()
+            if os.path.exists('last.avi'):
+                os.remove('last.avi')
             os.rename('current.avi', 'last.avi')
             video_start_time = datetime.now()
-            out = cv2.VideoWriter('current.avi',fourcc, video_fps, (640,480))
+            out = cv2.VideoWriter('current.avi', fourcc, video_fps, (640, 480))
 
         key = cv2.waitKey(1)
-        print("time-per-frame: ", (datetime.now() - start_frame).microseconds/10**6, "FPS: ", cap.get(cv2.CAP_PROP_FPS))
+        # print("time-per-frame: ", (datetime.now() - start_frame).microseconds /
+        #       10**6, "FPS: ", cap.get(cv2.CAP_PROP_FPS))
 
         if key == 27:
             break
     cap.release()
     out.release()
     cv2.destroyAllWindows()
-
 
 
 def start_video(video_path):

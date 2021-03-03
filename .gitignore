@@ -7,3 +7,6 @@
 .vscode
 *.avi
 logs.log
+*.vscode
+*.json
+.vscode/settings.json

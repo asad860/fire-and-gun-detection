@@ -42,3 +42,53 @@ WARNING:03/02/2021 07:05:27 PM Knife detected, path: threats/5965f18d-8bcc-41e0-
 ERROR:03/02/2021 07:05:29 PM (535, b'5.7.8 Username and Password not accepted. Learn more at\n5.7.8  https://support.google.com/mail/?p=BadCredentials l15sm2825735wmh.21 - gsmtp')
 WARNING:03/02/2021 07:06:26 PM Knife detected, path: threats/c11deeae-0ed1-43b6-a68e-315730d4422d_Knife.jpg
 ERROR:03/02/2021 07:06:28 PM (535, b'5.7.8 Username and Password not accepted. Learn more at\n5.7.8  https://support.google.com/mail/?p=BadCredentials l8sm13933312wrx.83 - gsmtp')
+WARNING:03/03/2021 11:20:13 PM Gun detected, path: threats\b6ee92fc-76d2-463f-9d93-bad30722d8a3_Gun.jpg
+ERROR:03/03/2021 11:20:15 PM (535, b'5.7.8 Username and Password not accepted. Learn more at\n5.7.8  https://support.google.com/mail/?p=BadCredentials 4sm7095162wma.0 - gsmtp')
+WARNING:03/03/2021 11:59:49 PM Gun detected, path: threats\3bc3028d-6eea-49b1-82bf-a60b6a49505c_Gun.jpg
+ERROR:03/03/2021 11:59:52 PM (535, b'5.7.8 Username and Password not accepted. Learn more at\n5.7.8  https://support.google.com/mail/?p=BadCredentials z25sm8340850wmi.23 - gsmtp')
+WARNING:03/04/2021 12:00:05 AM Gun detected, path: threats\fd574fdd-281a-4b8c-806c-29c2c847ee43_Gun.jpg
+ERROR:03/04/2021 12:00:06 AM (535, b'5.7.8 Username and Password not accepted. Learn more at\n5.7.8  https://support.google.com/mail/?p=BadCredentials u20sm6736656wru.6 - gsmtp')
+WARNING:03/04/2021 12:01:26 AM Gun detected, path: threats\d68a9b95-0dc9-4916-b112-2f1d70699c73_Gun.jpg
+ERROR:03/04/2021 12:01:27 AM (535, b'5.7.8 Username and Password not accepted. Learn more at\n5.7.8  https://support.google.com/mail/?p=BadCredentials p16sm22497160wrt.54 - gsmtp')
+WARNING:03/04/2021 12:01:58 AM Gun detected, path: threats\200e2c8f-4550-4114-a7d4-e0e4c7b727f7_Gun.jpg
+ERROR:03/04/2021 12:01:59 AM (535, b'5.7.8 Username and Password not accepted. Learn more at\n5.7.8  https://support.google.com/mail/?p=BadCredentials o10sm31374626wrx.5 - gsmtp')
+WARNING:03/04/2021 12:02:18 AM Gun detected, path: threats\21d13243-7a92-44d5-a130-ef1c2f8dcf36_Gun.jpg
+ERROR:03/04/2021 12:02:20 AM (535, b'5.7.8 Username and Password not accepted. Learn more at\n5.7.8  https://support.google.com/mail/?p=BadCredentials p18sm27027607wro.18 - gsmtp')
+WARNING:03/04/2021 12:02:34 AM Gun detected, path: threats\12f25548-5b90-4690-b4e1-9bcce2e4c955_Gun.jpg
+ERROR:03/04/2021 12:02:35 AM (535, b'5.7.8 Username and Password not accepted. Learn more at\n5.7.8  https://support.google.com/mail/?p=BadCredentials f2sm30989010wrq.34 - gsmtp')
+WARNING:03/04/2021 12:03:23 AM Gun detected, path: threats\8251fbde-d66e-4362-b217-0dd32a42e34d_Gun.jpg
+ERROR:03/04/2021 12:03:24 AM (535, b'5.7.8 Username and Password not accepted. Learn more at\n5.7.8  https://support.google.com/mail/?p=BadCredentials a5sm33866566wrs.35 - gsmtp')
+WARNING:03/04/2021 12:03:39 AM Gun detected, path: threats\e58b5940-11d0-4337-8793-9210558ed7e8_Gun.jpg
+ERROR:03/04/2021 12:03:40 AM (535, b'5.7.8 Username and Password not accepted. Learn more at\n5.7.8  https://support.google.com/mail/?p=BadCredentials b65sm6339145wmh.4 - gsmtp')
+WARNING:03/04/2021 12:03:55 AM Rifle detected, path: threats\bb71047f-47fa-4247-aa11-a6dbecffd745_Rifle.jpg
+ERROR:03/04/2021 12:03:58 AM (535, b'5.7.8 Username and Password not accepted. Learn more at\n5.7.8  https://support.google.com/mail/?p=BadCredentials i8sm21548367wrx.43 - gsmtp')
+WARNING:03/04/2021 12:04:10 AM Gun detected, path: threats\bac427fd-df8b-4b26-a23a-7737ba5bf08d_Gun.jpg
+ERROR:03/04/2021 12:04:12 AM (535, b'5.7.8 Username and Password not accepted. Learn more at\n5.7.8  https://support.google.com/mail/?p=BadCredentials j12sm5221005wrx.59 - gsmtp')
+WARNING:03/04/2021 12:04:25 AM Gun detected, path: threats\e989f0e2-d62b-4e9c-8131-38bc9f49a68f_Gun.jpg
+ERROR:03/04/2021 12:04:26 AM (535, b'5.7.8 Username and Password not accepted. Learn more at\n5.7.8  https://support.google.com/mail/?p=BadCredentials 21sm6975685wme.6 - gsmtp')
+WARNING:03/04/2021 12:06:59 AM Gun detected, path: threats\4cd1bdc0-7c02-4180-8ad3-619736e0f932_Gun.jpg
+ERROR:03/04/2021 12:07:00 AM [SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1076)
+WARNING:03/04/2021 12:07:14 AM Gun detected, path: threats\5d3f3a5c-dcf6-4670-a30a-2f5a26f082bc_Gun.jpg
+ERROR:03/04/2021 12:07:15 AM [SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1076)
+WARNING:03/04/2021 12:07:30 AM Gun detected, path: threats\5d87941c-0700-4608-b8a5-0579fb192413_Gun.jpg
+ERROR:03/04/2021 12:07:31 AM [SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1076)
+WARNING:03/04/2021 12:23:21 AM Rifle detected, path: threats\e7afd8f2-2929-4c85-a88a-466c5572a01f_Rifle.jpg
+ERROR:03/04/2021 12:23:23 AM (535, b'5.7.8 Username and Password not accepted. Learn more at\n5.7.8  https://support.google.com/mail/?p=BadCredentials v9sm33452618wrn.86 - gsmtp')
+WARNING:03/04/2021 12:23:35 AM Knife detected, path: threats\a942dfe1-d865-48ba-829c-18d0842cd59d_Knife.jpg
+ERROR:03/04/2021 12:23:37 AM (535, b'5.7.8 Username and Password not accepted. Learn more at\n5.7.8  https://support.google.com/mail/?p=BadCredentials f7sm15893015wrm.36 - gsmtp')
+WARNING:03/04/2021 12:24:32 AM Gun detected, path: threats\13132200-d4f1-4c13-ae5e-bda24e5f0aec_Gun.jpg
+ERROR:03/04/2021 12:24:33 AM (535, b'5.7.8 Username and Password not accepted. Learn more at\n5.7.8  https://support.google.com/mail/?p=BadCredentials z25sm8397528wmi.23 - gsmtp')
+WARNING:03/04/2021 12:24:59 AM Gun detected, path: threats\9dfe2b7e-6f3d-4274-8b09-0eb19fc96de7_Gun.jpg
+ERROR:03/04/2021 12:25:01 AM (535, b'5.7.8 Username and Password not accepted. Learn more at\n5.7.8  https://support.google.com/mail/?p=BadCredentials v9sm33456913wrn.86 - gsmtp')
+WARNING:03/04/2021 12:25:15 AM Gun detected, path: threats\1027af7c-7c82-4fc7-bc92-6ed19f72660a_Gun.jpg
+ERROR:03/04/2021 12:25:16 AM (535, b'5.7.8 Username and Password not accepted. Learn more at\n5.7.8  https://support.google.com/mail/?p=BadCredentials u20sm6808274wru.6 - gsmtp')
+WARNING:03/04/2021 12:28:12 AM Gun detected, path: threats\77d6c0e8-19ad-4f83-8295-0f8fb55e381f_Gun.jpg
+ERROR:03/04/2021 12:28:13 AM (535, b'5.7.8 Username and Password not accepted. Learn more at\n5.7.8  https://support.google.com/mail/?p=BadCredentials c11sm24289509wrm.67 - gsmtp')
+WARNING:03/04/2021 12:28:30 AM Gun detected, path: threats\83ecff86-dc8d-4184-a4ed-67cea4d4d003_Gun.jpg
+ERROR:03/04/2021 12:28:31 AM (535, b'5.7.8 Username and Password not accepted. Learn more at\n5.7.8  https://support.google.com/mail/?p=BadCredentials h20sm6827366wmm.19 - gsmtp')
+WARNING:03/04/2021 12:28:46 AM Gun detected, path: threats\bc516f4e-c817-45d8-8efb-2c558941429b_Gun.jpg
+ERROR:03/04/2021 12:28:47 AM (535, b'5.7.8 Username and Password not accepted. Learn more at\n5.7.8  https://support.google.com/mail/?p=BadCredentials y62sm9100307wmy.9 - gsmtp')
+WARNING:03/04/2021 12:48:28 AM Gun detected, path: threats\c9f3b0a6-410c-407f-a624-c451744c9d2b_Gun.jpg
+ERROR:03/04/2021 12:48:29 AM (535, b'5.7.8 Username and Password not accepted. Learn more at\n5.7.8  https://support.google.com/mail/?p=BadCredentials j136sm7284512wmj.35 - gsmtp')
+WARNING:03/04/2021 12:48:43 AM Gun detected, path: threats\54c3cdb4-a625-447e-90cf-cb12dacea3e3_Gun.jpg
+ERROR:03/04/2021 12:48:44 AM (535, b'5.7.8 Username and Password not accepted. Learn more at\n5.7.8  https://support.google.com/mail/?p=BadCredentials u2sm10651932wrp.12 - gsmtp')
