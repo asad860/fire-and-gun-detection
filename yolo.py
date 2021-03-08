@@ -32,11 +32,11 @@ last_mail_time = None
 
 CONFIDENCE = 0.5
 ALERT_DIR = 'threats'
-sender = "from@example.com"
-receiver = "to@example.com"
-USERNAME = "user@gmail.com"
+sender = "asadjaveed11@gmail.com"
+receiver = "hassanspallhs323@gmail.com"
+USERNAME = "asadjaveed11@gmail.com"
 PASSWORD = "password"
-CC_person = 'second@gmail.com'
+CC_person = 'arsalsohail8@gmail.com'
 PORT = 465
 SERVER = "smtp.gmail.com"
 time_interval = 15  # seconds after generate new mail.
